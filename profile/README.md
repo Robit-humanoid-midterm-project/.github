@@ -1,5 +1,7 @@
 # gh auth login 설정 필요
 
+ws 내 src로 이동 후
+
 ```
 git clone -b jazzy https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 git clone -b jazzy https://github.com/ROBOTIS-GIT/dynamixel_interfaces.git
@@ -55,3 +57,15 @@ tune_walk 실행
 tu
 ```
 
+## 모든 repo fetch
+
+ws 내 src로 이동 후
+
+```
+for d in */; do
+  if [ -d "$d/.git" ]; then
+    echo "=== Fetching: $d ==="
+    (cd "$d" && git fetch --all)
+  fi
+done
+```

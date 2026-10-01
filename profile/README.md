@@ -57,7 +57,7 @@ tune_walk 실행
 tu
 ```
 
-## 모든 repo fetch
+# 모든 repo fetch
 
 ws 내 src로 이동 후
 
@@ -66,6 +66,21 @@ for d in */; do
   if [ -d "$d/.git" ]; then
     echo "=== Fetching: $d ==="
     (cd "$d" && git fetch --all)
+  fi
+done
+```
+
+# 추가된 repo만 clone
+
+ws 내 src로 이동 후
+
+```
+gh repo list Robit-humanoid-midterm-project --limit 500 --json name --jq '.[].name' | while read -r repo; do
+  if [ ! -d "$repo" ]; then
+    echo "=== 새로 추가된 레포 클론 중: $repo ==="
+    gh repo clone "Robit-humanoid-midterm-project/$repo"
+  else
+    echo "=== 이미 존재함 (스킵): $repo ==="
   fi
 done
 ```

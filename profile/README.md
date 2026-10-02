@@ -57,6 +57,11 @@ tune_walk 실행
 tu
 ```
 
+ebimu 실행
+```
+imu
+```
+
 # 모든 repo fetch
 
 ws 내 src로 이동 후

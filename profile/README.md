@@ -62,6 +62,21 @@ ebimu 실행
 imu
 ```
 
+vision 실행
+```
+vi
+```
+
+카메라 각도 실행
+```
+an
+```
+
+task_planner 실행
+```
+ta
+```
+
 # 모든 repo fetch
 
 ws 내 src로 이동 후
